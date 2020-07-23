@@ -112,12 +112,22 @@
       const quantity = inputNew - 1;
       document.getElementById("inputTextPhone").value = quantity;
 
+      if(quantity<=0){
+         const price = document.getElementById("pricePhone").innerText;
+         const priceNumber = parseFloat(price);
+
+      const totalPrice = priceNumber * 0;
+      document.getElementById("pricePhone").innerText =  totalPrice;
+
+      }
+      else{
+
       const price = document.getElementById("pricePhone").innerText;
       const priceNumber = parseFloat(price);
 
       const totalPrice = priceNumber - 1219;
       document.getElementById("pricePhone").innerText =  totalPrice;
-
+      }
 
       })
 
@@ -154,10 +164,13 @@
       const quantityCase = inputNewCase - 1;
       document.getElementById("inputTextCase").value = quantityCase;
 
+
+
       const priceCase = document.getElementById("priceCase").innerText;
       const priceNumberCase = parseFloat(priceCase);
 
       const totalPriceCase = priceNumberCase - 59;
+
       document.getElementById("priceCase").innerText =  totalPriceCase;
 
 
